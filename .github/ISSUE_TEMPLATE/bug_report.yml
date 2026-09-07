@@ -1,0 +1,67 @@
+name: Сообщить об ошибке
+description: Сообщите о проблеме в Трекере Дальнобойщика
+title: "[Ошибка]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение. Чем точнее описание, тем быстрее получится воспроизвести и исправить проблему.
+  - type: input
+    id: version
+    attributes:
+      label: Версия трекера
+      description: Например v0.1.0-alpha.13
+      placeholder: v0.1.0-alpha.13
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Где возникла проблема?
+      options:
+        - Запись заказов
+        - Расходы / горячие клавиши
+        - XP
+        - Аналитика
+        - Мини-окно
+        - Уведомления / звук
+        - Запуск / завершение приложения
+        - Интерфейс
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло?
+      description: Опишите проблему своими словами.
+      placeholder: Что вы сделали и что произошло после этого?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Как должно было работать?
+      placeholder: Опишите ожидаемый результат.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить проблему?
+      placeholder: |
+        1. Запустил трекер
+        2. Начал смену
+        3. ...
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      description: Перетащите сюда скриншоты или видео, если они помогут понять проблему.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Проверка
+      options:
+        - label: Я проверил, что использую актуальную версию из Releases.
+          required: true
