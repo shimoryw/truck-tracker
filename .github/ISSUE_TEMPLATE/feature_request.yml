@@ -1,0 +1,23 @@
+name: Предложить улучшение
+description: Идея новой функции или улучшения Трекера Дальнобойщика
+title: "[Идея]: "
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что предлагаете добавить?
+      placeholder: Опишите идею своими словами.
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Чем это будет полезно?
+      placeholder: Как это упростит или улучшит работу с трекером?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Пример
+      description: Если есть пример интерфейса, скриншот или похожая реализация — добавьте сюда.
